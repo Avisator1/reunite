@@ -60,7 +60,7 @@ const MyQRCodes = ({ currentUserId }) => {
 
   const handleDownload = async (qrCode) => {
     try {
-      const qrUrl = `http://localhost:5000${qrCode.qr_image_url}`;
+      const qrUrl = `https://reunite.adiavi.com/${qrCode.qr_image_url}`;
       
       // Fetch the image
       const response = await fetch(qrUrl);
@@ -253,7 +253,7 @@ const MyQRCodes = ({ currentUserId }) => {
               {qr.qr_image_url && (
                 <div className="mb-4 flex justify-center">
                   <img
-                    src={`http://localhost:5000${qr.qr_image_url}`}
+                    src={`https://reunite.adiavi.com/${qr.qr_image_url}`}
                     alt="QR Code"
                     className="w-48 h-48 border border-gray-200 rounded-lg"
                   />

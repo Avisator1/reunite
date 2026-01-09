@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The server will start on `http://localhost:5000`
+The server will start on `https://reunite.adiavi.com/`
 
 ## Default Admin Account
 

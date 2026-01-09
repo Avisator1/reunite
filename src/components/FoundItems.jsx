@@ -143,7 +143,7 @@ const FoundItems = () => {
             {item.photo_url && (
               <div className="mb-5">
                 <img
-                  src={`http://localhost:5000${item.photo_url}`}
+                  src={`https://reunite.adiavi.com/${item.photo_url}`}
                   alt={item.title}
                   className="w-full h-56 object-cover rounded-lg border border-gray-200"
                 />
@@ -217,7 +217,7 @@ const FoundItems = () => {
                 <div className="flex items-center gap-3 mb-3">
                   {selectedItem.photo_url && (
                     <img
-                      src={`http://localhost:5000${selectedItem.photo_url}`}
+                      src={`https://reunite.adiavi.com/${selectedItem.photo_url}`}
                       alt={selectedItem.title}
                       className="w-16 h-16 object-cover rounded-lg border border-gray-200"
                     />

@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify, send_file
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from models import db, User, LostItem, QRCode, ContactMessage
+from config import Config
 from datetime import datetime
 import qrcode
 import io
@@ -42,14 +43,14 @@ def create_qr_code():
         qr = qrcode.QRCode(version=1, box_size=10, border=5)
         # QR code links to frontend page
         # Use request.host_url and replace port 5000 with frontend port (5173 for Vite dev)
-        # In production, use your actual frontend domain
+        # In production, use the configured frontend URL
         base_url = request.host_url.rstrip('/')
         # Replace backend port with frontend port for local dev
         if 'localhost:5000' in base_url:
             frontend_url = base_url.replace(':5000', ':5173')
         else:
-            # In production, use your frontend domain
-            frontend_url = base_url.replace(':5000', '')  # Or use your actual frontend URL
+            # In production, use the configured frontend URL
+            frontend_url = Config.FRONTEND_URL.rstrip('/')
         qr_url = f"{frontend_url}/qr/{code}"
         qr.add_data(qr_url)
         qr.make(fit=True)

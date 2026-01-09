@@ -139,7 +139,7 @@ const MyClaims = ({ currentUserId }) => {
             <div className="flex items-start gap-4">
               {claim.found_item?.photo_url && (
                 <img
-                  src={`http://localhost:5000${claim.found_item.photo_url}`}
+                  src={`https://reunite.adiavi.com/${claim.found_item.photo_url}`}
                   alt={claim.found_item.title}
                   className="w-24 h-24 object-cover rounded-lg border border-gray-200 shrink-0"
                 />

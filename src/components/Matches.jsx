@@ -99,7 +99,7 @@ const Matches = () => {
               </div>
               {match.found_item?.photo_url && (
                 <img
-                  src={`http://localhost:5000${match.found_item.photo_url}`}
+                  src={`https://reunite.adiavi.com/${match.found_item.photo_url}`}
                   alt="Found item"
                   className="w-20 h-20 object-cover rounded-lg border border-gray-200"
                 />

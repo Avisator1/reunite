@@ -161,7 +161,7 @@ const ClaimDetail = ({ claim, currentUserId, onClose, onUpdate }) => {
                 <h4 className="text-sm font-semibold text-[#5C5B61] uppercase mb-3">Found Item</h4>
               {currentClaim.found_item?.photo_url && (
                 <img
-                  src={`http://localhost:5000${currentClaim.found_item.photo_url}`}
+                  src={`https://reunite.adiavi.com/${currentClaim.found_item.photo_url}`}
                   alt={currentClaim.found_item.title}
                   className="w-full h-48 object-cover rounded-lg border border-gray-200 mb-3"
                 />
@@ -187,7 +187,7 @@ const ClaimDetail = ({ claim, currentUserId, onClose, onUpdate }) => {
                 <h4 className="text-sm font-semibold text-[#5C5B61] uppercase mb-3">Your Lost Item</h4>
               {currentClaim.lost_item?.photo_url && (
                 <img
-                  src={`http://localhost:5000${currentClaim.lost_item.photo_url}`}
+                  src={`https://reunite.adiavi.com/${currentClaim.lost_item.photo_url}`}
                   alt={currentClaim.lost_item.title}
                   className="w-full h-48 object-cover rounded-lg border border-gray-200 mb-3"
                 />
@@ -237,7 +237,7 @@ const ClaimDetail = ({ claim, currentUserId, onClose, onUpdate }) => {
                 <div>
                   <h4 className="text-sm font-semibold text-[#5C5B61] uppercase mb-2">Proof Photo</h4>
                   <img
-                    src={`http://localhost:5000${currentClaim.proof_photo_url}`}
+                    src={`https://reunite.adiavi.com/${currentClaim.proof_photo_url}`}
                     alt="Proof"
                     className="w-full rounded-lg border border-gray-200 mb-2"
                   />
