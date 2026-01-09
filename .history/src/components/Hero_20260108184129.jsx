@@ -260,7 +260,7 @@ const LostAndFoundHero = () => {
           {/* Primary CTA */}
  <div className="flex justify-center">
   <a
-    href="/signup"
+    href="/search"
     className="
       group
       inline-flex items-center gap-2
